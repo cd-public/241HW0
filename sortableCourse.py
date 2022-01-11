@@ -17,26 +17,20 @@
 #   * Course number
 # - a constructor __init__ that initializes with a default value (Two empty strings "" and 0)
 
+# You may add additional methods or fields, but most have these methods or fields.
+
 class SortableCourse:
 	   
 	# constructor
 	def __init__(self):
-		self.__name = ""
-		self.__prefix = ""
-		self.__num = 0
+		pass
 		
 	# setting data if appropriate
 	def setData(self, name, prefix, num):
-		self.__name = name
-		self.__prefix = prefix
-		self.__num = num
-		return
+		pass
 		
 	def getData(self):
-		return [self.__name, self.__prefix, self.__num]
+		pass
 	
 	def __gt__(self, arg):
-		fields = arg.getData()
-		if self.__prefix == fields[1]: # deal with same prefix
-			return self.__num > fields[2]
-		return self.__prefix > fields[1] # alphabetical is backwards
+		pass
