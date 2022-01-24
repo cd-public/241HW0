@@ -23,14 +23,29 @@ class SortableCourse:
 	   
 	# constructor
 	def __init__(self):
-		pass
+		self.__name = ""
+		self.__prefix = ""
+		self.__num = 0
 		
 	# setting data if appropriate
 	def setData(self, name, prefix, num):
-		pass
+		if name is str:
+			self.__name = name
+		if prefix is str:
+			self.__prefix = prefix
+		if num is int:
+			self.__num = num
 		
 	def getData(self):
-		pass
+		datalist = []
+		datalist.append(name, prefix, num)
+		return datalist
+	
 	
 	def __gt__(self, arg):
-		pass
+		if self.__prefix == arg.getData():
+			return self.__num > arg.getData()
+		elif self.__prefix > arg.getData():
+			return self.__prefix > arg.getData()
+
+
